@@ -13,7 +13,7 @@ const mail = [
   "buzzeosime@madonnadicanneto.it",
   "info@madonnadicanneto.it",
 ];
-console.log(mail);
+// console.log(mail);
 // chiedo la mail all'utente
 let insertEmail = prompt(
   "INSERISCI IL TUO INDIRIZZO EMAIL... NB: per accedere come OSPITE inserire buzzeosimone@gmail.com"
@@ -38,3 +38,10 @@ for (let i = 0; i < mail.length; i++) {
     );
   }
 }
+
+// creo numero random per giocatore
+const userNumber = Math.floor(Math.random() * 6);
+console.log(userNumber);
+// creo numero random per pc
+const pcNumber = Math.floor(Math.random() * 6);
+console.log(pcNumber);
