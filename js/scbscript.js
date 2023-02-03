@@ -20,18 +20,19 @@ console.log(insertEmail);
 // cerco la mail inserita
 for (let i = 0; i < mail.length; i++) {
   if (mail[i] === insertEmail) {
-    console.log("Bentornato " + firstName);
+    // console.log("Bentornato " + firstName);
     mailElement.innerHTML = "BENTORNATO " + firstName;
     break;
   } else {
-    console.log(
+    // console.log(
+    //   "Siamo spiacenti " +
+    //     firstName +
+    //     " la tua mail non è presente nei nostri database. Per poter accedere alla Bisca devi prima registrarti."
+    // );
+    alert(
       "Siamo spiacenti " +
         firstName +
         " la tua mail non è presente nei nostri database. Per poter accedere alla Bisca devi prima registrarti."
     );
-    mailElement.innerHTML =
-      "Siamo spiacenti " +
-      firstName +
-      " la tua mail non è presente nei nostri database. Per poter accedere alla Bisca devi prima registrarti.";
   }
 }
