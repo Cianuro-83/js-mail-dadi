@@ -1,6 +1,9 @@
 console.log("BENVENUTO CIANURO NELLA TUA BISCA CLANDESTINA");
 const userElement = document.getElementById("user");
 const mailElement = document.getElementById("mail");
+let dadiAutoPlayerElement = document.getElementById("dadi-auto-player");
+let dadiAutoPcElement = document.getElementById("dadi-auto-pc");
+let dadiAutoRisultatoElement = document.getElementById("dadi-auto-esito");
 let firstName = prompt("INSERISCI IL TUO NOME");
 userElement.innerHTML = firstName;
 console.log(userElement.outerText);
@@ -15,9 +18,7 @@ const mail = [
 ];
 // console.log(mail);
 // chiedo la mail all'utente
-let insertEmail = prompt(
-  "INSERISCI IL TUO INDIRIZZO EMAIL... NB: per accedere come OSPITE inserire buzzeosimone@gmail.com"
-);
+let insertEmail = prompt("INSERISCI IL TUO INDIRIZZO EMAIL..");
 console.log(insertEmail);
 // cerco la mail inserita
 for (let i = 0; i < mail.length; i++) {
@@ -26,29 +27,37 @@ for (let i = 0; i < mail.length; i++) {
     mailElement.innerHTML = "BENTORNATO " + firstName;
     break;
   } else {
-    // console.log(
-    //   "Siamo spiacenti " +
-    //     firstName +
-    //     " la tua mail non è presente nei nostri database. Per poter accedere alla Bisca devi prima registrarti."
-    // );
-    alert(
-      "Siamo spiacenti " +
-        firstName +
-        " la tua mail non è presente nei nostri database. Per poter accedere alla Bisca devi prima registrarti."
-    );
+    mailElement.innerHTML =
+      firstName +
+      " La tua mail non è presente nel sistema!!! Stai giocando come ospite";
   }
 }
+// insertEmail !mail[i]
+//     alert(
+//         "Siamo spiacenti " + firstName + " la tua mail non è presente nei nostri database. Per poter accedere alla Bisca devi prima registrarti.")
+// } else {
+//     mailElement.innerHTML = firstName + " sei un utente non registrato";
 
+// };
 // creo numero random per giocatore
-const userNumber = Math.floor(Math.random() * 6);
+const userNumber = Math.floor(Math.random() * 5 + 1);
+dadiAutoPlayerElement.innerHTML = userNumber;
 console.log(userNumber);
 // creo numero random per pc
-const pcNumber = Math.floor(Math.random() * 6);
+const pcNumber = Math.floor(Math.random() * 5 + 1);
+dadiAutoPcElement.innerHTML = pcNumber;
 console.log(pcNumber);
+// LANCIO I DADI
 if (userNumber > pcNumber) {
+  dadiAutoRisultatoElement.innerHTML =
+    "Complimenti " + firstName + " hai VINTO!!!";
   console.log("Complimenti " + firstName + " hai VINTO!!!");
 } else if (userNumber < pcNumber) {
+  dadiAutoRisultatoElement.innerHTML =
+    "Mi dispiace " + firstName + " hai PERSO!!!";
   console.log("Mi dispiace " + firstName + " hai PERSO!!!");
 } else {
+  dadiAutoRisultatoElement.innerHTML =
+    "PARI... non abbiamo nné vinti né vincitori";
   console.log("PARI");
 }
