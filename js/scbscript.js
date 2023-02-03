@@ -61,3 +61,6 @@ if (userNumber > pcNumber) {
     "PARI... non abbiamo nné vinti né vincitori";
   console.log("PARI");
 }
+// **************************
+// GIOCO 2: LANCIO DADI OLD STYLE
+// **************************
