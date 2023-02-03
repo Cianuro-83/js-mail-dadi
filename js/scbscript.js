@@ -15,7 +15,9 @@ const mail = [
 ];
 console.log(mail);
 // chiedo la mail all'utente
-let insertEmail = prompt("INSERISCI IL TUO INDIRIZZO EMAIL");
+let insertEmail = prompt(
+  "INSERISCI IL TUO INDIRIZZO EMAIL... NB: per accedere come OSPITE inserire buzzeosimone@gmail.com"
+);
 console.log(insertEmail);
 // cerco la mail inserita
 for (let i = 0; i < mail.length; i++) {
