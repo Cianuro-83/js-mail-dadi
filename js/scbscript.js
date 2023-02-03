@@ -45,3 +45,10 @@ console.log(userNumber);
 // creo numero random per pc
 const pcNumber = Math.floor(Math.random() * 6);
 console.log(pcNumber);
+if (userNumber > pcNumber) {
+  console.log("Complimenti " + firstName + " hai VINTO!!!");
+} else if (userNumber < pcNumber) {
+  console.log("Mi dispiace " + firstName + " hai PERSO!!!");
+} else {
+  console.log("PARI");
+}
